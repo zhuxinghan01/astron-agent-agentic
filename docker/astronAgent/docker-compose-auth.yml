@@ -1,6 +1,6 @@
 services:
   casdoor:
-    image: casbin/casdoor:latest
+    image: casbin/casdoor:v2.67.0
     container_name: astron-agent-casdoor
     restart: always
     user: root
@@ -10,6 +10,8 @@ services:
       - GIN_MODE=release
       - CONSOLE_DOMAIN=${CONSOLE_DOMAIN:-http://localhost}
       - HOST_BASE_ADDRESS=${HOST_BASE_ADDRESS:-http://localhost}
+      - origin=${CONSOLE_CASDOOR_URL:-http://localhost:8000}
+      - originFrontend=${CONSOLE_CASDOOR_URL:-http://localhost:8000}
     volumes:
       - ./casdoor/conf:/conf
       - ./casdoor/entrypoint.sh:/entrypoint.sh:ro
