@@ -52,10 +52,9 @@ public class BotChainServiceImpl implements BotChainService {
         chainInfo.setId(null);
         chainInfo.setBotId(Math.toIntExact(targetId));
         chainInfo.setFlowId(null);
-        if (null == spaceId) {
-            chainInfo.setUid(uid);
-        } else {
-            chainInfo.setSpaceId(spaceId);
+        chainInfo.setUid(uid); // Always set uid for audit and permission control
+        if (null != spaceId) {
+            chainInfo.setSpaceId(spaceId); // Set spaceId for non-personal space
         }
         chainInfo.setUpdateTime(LocalDateTime.now());
 
@@ -92,10 +91,9 @@ public class BotChainServiceImpl implements BotChainService {
         chain.setBotId(Math.toIntExact(targetId));
         chain.setMaasId(currentMass);
         chain.setFlowId(flowId);
-        if (null == spaceId) {
-            chain.setUid(uid);
-        } else {
-            chain.setSpaceId(spaceId);
+        chain.setUid(uid); // Always set uid for audit and permission control
+        if (null != spaceId) {
+            chain.setSpaceId(spaceId); // Set spaceId for non-personal space
         }
         chain.setUpdateTime(LocalDateTime.now());
         userLangChainDataService.insertUserLangChainInfo(chain);
