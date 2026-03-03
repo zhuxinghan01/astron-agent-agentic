@@ -16,6 +16,7 @@ graph LR
     F --> G[/backend-design<br/>/frontend-design]
     G --> H[实现代码]
     H --> I[/doc-module]
+    I --> J[/drift-check]
 ```
 
 ### 小功能（快速链路）
@@ -30,6 +31,7 @@ graph LR
     D --> E[/tasks]
     E --> F[实现代码]
     F --> G[/doc-module]
+    G --> H[/drift-check]
 ```
 
 ### Bug 修复
@@ -59,11 +61,20 @@ graph LR
 | 5 | 后端设计 | `/backend-design` | `spec.md` + `tasks.md` | `backend-design.md` | 10-20min |
 | 6 | 前端设计 | `/frontend-design` | `spec.md` + `tasks.md` | `frontend-design.md` | 10-20min |
 | 7 | 模块文档 | `/doc-module` | 现有代码 | `module.md` | 10-15min |
-| 8 | Bug 修复 | `/bugfix` | Issue 编号 | `bugfix.md` | 10-15min |
+| 8 | 文档漂移校验 | `/drift-check` | `module.md` | `drift-check-report.md` | 5-10min |
+| 9 | Bug 修复 | `/bugfix` | Issue 编号 | `bugfix.md` | 10-15min |
 
 **说明**：
 - `/stories`、`/backend-design`、`/frontend-design` 为按需执行，不是所有流程都需要
 - `/context-check` 建议在开始新功能前执行，确保模块文档可信
+- `/drift-check` 建议在 `/doc-module` 后执行，确保文档更新准确
+
+**文档校验闭环**：
+```
+开发前: /context-check → 检查旧文档是否可信
+开发中: 实现代码
+开发后: /doc-module → 更新文档 → /drift-check → 验证新文档准确性
+```
 
 ---
 
@@ -105,6 +116,10 @@ graph LR
 # 7. 更新文档
 /doc-module
 # 输出: 更新 module.md
+
+# 8. 验证文档
+/drift-check
+# 输出: drift-check-report.md
 ```
 
 ### 场景 2: 小功能开发（快速链路）
@@ -127,6 +142,9 @@ graph LR
 
 # 5. 更新文档
 /doc-module
+
+# 6. 验证文档
+/drift-check
 ```
 
 ### 场景 3: 简单 Bug 修复
@@ -201,6 +219,8 @@ backend-design.md + frontend-design.md
 代码实现
     ↓
 /doc-module → module.md (更新)
+    ↓
+/drift-check → drift-check-report.md
 ```
 
 ### 快速链路 (简单功能)
@@ -219,6 +239,8 @@ backend-design.md + frontend-design.md
 代码实现
     ↓
 /doc-module → module.md (更新)
+    ↓
+/drift-check → drift-check-report.md
 ```
 
 ### 逆向链路 (已有代码)
@@ -246,6 +268,7 @@ backend-design.md + frontend-design.md
 - [ ] `make check` - 代码检查
 - [ ] `make test` - 运行测试
 - [ ] `/doc-module` - 更新模块文档
+- [ ] `/drift-check` - 验证文档准确性
 - [ ] 提交代码和文档
 
 **小功能（快速链路）**:
@@ -256,6 +279,7 @@ backend-design.md + frontend-design.md
 - [ ] 实现代码（按需执行设计）
 - [ ] `make check && make test`
 - [ ] `/doc-module` - 更新模块文档
+- [ ] `/drift-check` - 验证文档准确性
 - [ ] 提交代码和文档
 
 ### Bug 修复
@@ -272,6 +296,7 @@ backend-design.md + frontend-design.md
 - [ ] 实现修复
 - [ ] `make check && make test`
 - [ ] `/doc-module` - 更新模块文档
+- [ ] `/drift-check` - 验证文档准确性
 - [ ] 提交代码和文档
 
 ---
@@ -292,12 +317,14 @@ console/
 │       ├── backend-design.md    # Skill 5: 后端设计（按需）
 │       ├── frontend-design.md   # Skill 6: 前端设计（按需）
 │       ├── doc-module.md        # Skill 7: 模块文档
-│       └── bugfix.md            # Skill 8: Bug 修复
+│       ├── drift-check.md       # Skill 8: 文档漂移校验
+│       └── bugfix.md            # Skill 9: Bug 修复
 └── docsForAi/
     ├── overview.md              # 项目概览
     ├── {module}/
     │   ├── module.md            # 模块文档
-    │   └── context-check-report.md  # 上下文校验报告（临时）
+    │   ├── context-check-report.md  # 上下文校验报告（临时）
+    │   └── drift-check-report.md    # 文档漂移校验报告（临时）
     ├── {feature-name}/          # 新功能文档
     │   ├── requirement.md
     │   ├── stories.md           # 按需生成
@@ -328,10 +355,10 @@ console/
 ❌ 不要写冗长的文档
 ✅ 文档只记录关键信息，代码是最好的文档
 
-### 4. 及时更新文档
+### 4. 及时更新和验证文档
 
 ❌ 不要等到功能完成后再更新文档
-✅ 代码实现完成后立即更新 `module.md`
+✅ 代码实现完成后立即更新 `module.md` 并执行 `/drift-check` 验证
 
 ### 5. 文档即规范
 
@@ -350,4 +377,4 @@ console/
 
 ---
 
-**最后更新**: 2026-03-02
+**最后更新**: 2026-03-03
