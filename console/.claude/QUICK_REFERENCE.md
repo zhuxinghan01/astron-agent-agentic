@@ -69,9 +69,14 @@ graph LR
 
 ## 🚀 快速开始
 
-### 场景 1: 新功能开发
+### 场景 1: 大功能开发（完整链路）
 
 ```bash
+# 0. 上下文校验（推荐）
+/context-check
+# 输入: 模块名称（如 bot-management）
+# 输出: console/docsForAi/{module}/context-check-report.md
+
 # 1. 需求分析
 /requirement
 # 输入: 描述功能需求
@@ -102,7 +107,29 @@ graph LR
 # 输出: 更新 module.md
 ```
 
-### 场景 2: 简单 Bug 修复
+### 场景 2: 小功能开发（快速链路）
+
+```bash
+# 0. 上下文校验（推荐）
+/context-check
+
+# 1. 需求分析
+/requirement
+
+# 2. 技术规格（跳过 /stories）
+/spec
+
+# 3. 任务拆解
+/tasks
+
+# 4. 实现代码（按需执行设计）
+# 如需设计文档：/backend-design 或 /frontend-design
+
+# 5. 更新文档
+/doc-module
+```
+
+### 场景 3: 简单 Bug 修复
 
 ```bash
 # 1. 分析 Issue
@@ -200,15 +227,26 @@ backend-design.md + frontend-design.md
 
 ### 新功能开发
 
+**大功能（完整链路）**:
+- [ ] `/context-check` - 上下文校验（推荐）
 - [ ] `/requirement` - 需求文档
 - [ ] `/stories` - 用户故事
 - [ ] `/spec` - 技术规格
 - [ ] `/tasks` - 任务规划
-- [ ] `/backend-design` - 后端设计
-- [ ] `/frontend-design` - 前端设计
+- [ ] `/backend-design` + `/frontend-design` - 技术设计
 - [ ] 实现代码
 - [ ] `make check` - 代码检查
 - [ ] `make test` - 运行测试
+- [ ] `/doc-module` - 更新模块文档
+- [ ] 提交代码和文档
+
+**小功能（快速链路）**:
+- [ ] `/context-check` - 上下文校验（推荐）
+- [ ] `/requirement` - 需求文档
+- [ ] `/spec` - 技术规格（跳过 /stories）
+- [ ] `/tasks` - 任务规划
+- [ ] 实现代码（按需执行设计）
+- [ ] `make check && make test`
 - [ ] `/doc-module` - 更新模块文档
 - [ ] 提交代码和文档
 
@@ -238,25 +276,27 @@ console/
 │   ├── WORKFLOW.md              # 完整工作流程文档
 │   ├── QUICK_REFERENCE.md       # 本文件
 │   └── skills/
+│       ├── context-check.md     # Skill 0: 上下文校验
 │       ├── requirement.md       # Skill 1: 需求文档
-│       ├── stories.md           # Skill 2: 用户故事
+│       ├── stories.md           # Skill 2: 用户故事（按需）
 │       ├── spec.md              # Skill 3: 技术规格
 │       ├── tasks.md             # Skill 4: 任务规划
-│       ├── backend-design.md    # Skill 5: 后端设计
-│       ├── frontend-design.md   # Skill 6: 前端设计
+│       ├── backend-design.md    # Skill 5: 后端设计（按需）
+│       ├── frontend-design.md   # Skill 6: 前端设计（按需）
 │       ├── doc-module.md        # Skill 7: 模块文档
 │       └── bugfix.md            # Skill 8: Bug 修复
 └── docsForAi/
     ├── overview.md              # 项目概览
     ├── {module}/
-    │   └── module.md            # 模块文档
+    │   ├── module.md            # 模块文档
+    │   └── context-check-report.md  # 上下文校验报告（临时）
     ├── {feature-name}/          # 新功能文档
     │   ├── requirement.md
-    │   ├── stories.md
+    │   ├── stories.md           # 按需生成
     │   ├── spec.md
     │   ├── tasks.md
-    │   ├── backend-design.md
-    │   └── frontend-design.md
+    │   ├── backend-design.md    # 按需生成
+    │   └── frontend-design.md   # 按需生成
     └── bugfix-{number}/         # Bug 修复文档
         └── bugfix.md
 ```

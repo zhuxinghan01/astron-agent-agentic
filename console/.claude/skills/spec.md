@@ -42,7 +42,7 @@
 ---
 feature: {功能名称}
 created: {YYYY-MM-DD}
-upstream: stories.md
+upstream: requirement.md (+ stories.md if exists)
 ---
 
 # {功能名称} — 需求规格说明

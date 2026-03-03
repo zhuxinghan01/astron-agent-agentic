@@ -98,13 +98,3 @@ Console 项目提供了 9 个 Claude Code Skills，用于文档驱动开发：
 
 详见：[WORKFLOW.md](../.claude/WORKFLOW.md)
 
-**新功能开发**:
-```
-/requirement → /stories → /spec → /tasks → /backend-design + /frontend-design → 实现 → /doc-module
-```
-
-**Bug 修复**:
-- 简单 Bug: 直接修复 → 更新文档（如需要）
-- 复杂 Bug: `/bugfix` → 实现 → 更新文档
-
-详见: [开发工作流程文档](../.claude/WORKFLOW.md)
