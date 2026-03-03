@@ -10,9 +10,15 @@
 
 1. 读取用户故事文档
 2. 分析现有代码中相关的模块：
-   - 后端 Controller: `console/backend/hub/src/main/java/com/iflytek/astron/console/hub/controller/`
-   - 后端 Service: `console/backend/hub/src/main/java/com/iflytek/astron/console/hub/service/`
-   - 后端 Entity: `console/backend/hub/src/main/java/com/iflytek/astron/console/hub/entity/`
+   - 后端 Controller:
+     - Hub 模块: `console/backend/hub/src/main/java/com/iflytek/astron/console/hub/controller/`
+     - Toolkit 模块: `console/backend/toolkit/src/main/java/com/iflytek/astron/console/toolkit/controller/`
+   - 后端 Service:
+     - Hub 模块: `console/backend/hub/src/main/java/com/iflytek/astron/console/hub/service/`
+     - Toolkit 模块: `console/backend/toolkit/src/main/java/com/iflytek/astron/console/toolkit/service/`
+   - 后端 Entity:
+     - Hub 模块: `console/backend/hub/src/main/java/com/iflytek/astron/console/hub/entity/`
+   - Commons 工具类: `console/backend/commons/src/main/java/com/iflytek/astron/console/commons/`
    - 前端页面: `console/frontend/src/pages/`
    - 前端服务: `console/frontend/src/services/`
    - 前端 Store: `console/frontend/src/store/`
