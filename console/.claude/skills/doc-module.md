@@ -11,12 +11,20 @@
 ## 执行步骤
 
 1. 确定要生成文档的模块名称
-2. 扫描后端代码：
-   - Controller: `console/backend/hub/src/main/java/com/iflytek/astron/console/hub/controller/` 下相关文件
-   - Service: `console/backend/hub/src/main/java/com/iflytek/astron/console/hub/service/` 下相关文件
-   - Entity: `console/backend/hub/src/main/java/com/iflytek/astron/console/hub/entity/` 下相关文件
-   - Mapper: `console/backend/hub/src/main/java/com/iflytek/astron/console/hub/mapper/` 下相关文件
-   - DTO: `console/backend/hub/src/main/java/com/iflytek/astron/console/hub/dto/` 下相关文件
+2. 扫描后端代码（hub、toolkit、commons 三个模块）：
+   - Hub 模块:
+     - Controller: `console/backend/hub/src/main/java/com/iflytek/astron/console/hub/controller/`
+     - Service: `console/backend/hub/src/main/java/com/iflytek/astron/console/hub/service/`
+     - Entity: `console/backend/hub/src/main/java/com/iflytek/astron/console/hub/entity/`
+     - Mapper: `console/backend/hub/src/main/java/com/iflytek/astron/console/hub/mapper/`
+     - DTO: `console/backend/hub/src/main/java/com/iflytek/astron/console/hub/dto/`
+   - Toolkit 模块:
+     - Controller: `console/backend/toolkit/src/main/java/com/iflytek/astron/console/toolkit/controller/`
+     - Service: `console/backend/toolkit/src/main/java/com/iflytek/astron/console/toolkit/service/`
+   - Commons 模块:
+     - 工具类: `console/backend/commons/src/main/java/com/iflytek/astron/console/commons/util/`
+     - DTO: `console/backend/commons/src/main/java/com/iflytek/astron/console/commons/dto/`
+     - Service: `console/backend/commons/src/main/java/com/iflytek/astron/console/commons/service/`
 3. 扫描前端代码：
    - 页面: `console/frontend/src/pages/` 下相关文件
    - 服务: `console/frontend/src/services/` 下相关文件

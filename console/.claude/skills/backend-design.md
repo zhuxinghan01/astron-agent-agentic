@@ -13,13 +13,22 @@
 ## 执行步骤
 
 1. 读取规格说明和任务规划
-2. 分析现有后端代码模式：
-   - Controller 层: `console/backend/hub/src/main/java/com/iflytek/astron/console/hub/controller/`
-   - Service 层: `console/backend/hub/src/main/java/com/iflytek/astron/console/hub/service/`
-   - Entity 层: `console/backend/hub/src/main/java/com/iflytek/astron/console/hub/entity/`
-   - Mapper 层: `console/backend/hub/src/main/java/com/iflytek/astron/console/hub/mapper/`
-   - DTO: `console/backend/hub/src/main/java/com/iflytek/astron/console/hub/dto/`
-   - 配置: `console/backend/hub/src/main/java/com/iflytek/astron/console/hub/config/`
+2. 分析现有后端代码模式（扫描 hub、toolkit、commons 三个模块）：
+   - Hub 模块:
+     - Controller: `console/backend/hub/src/main/java/com/iflytek/astron/console/hub/controller/`
+     - Service: `console/backend/hub/src/main/java/com/iflytek/astron/console/hub/service/`
+     - Entity: `console/backend/hub/src/main/java/com/iflytek/astron/console/hub/entity/`
+     - Mapper: `console/backend/hub/src/main/java/com/iflytek/astron/console/hub/mapper/`
+     - DTO: `console/backend/hub/src/main/java/com/iflytek/astron/console/hub/dto/`
+     - 配置: `console/backend/hub/src/main/java/com/iflytek/astron/console/hub/config/`
+   - Toolkit 模块:
+     - Controller: `console/backend/toolkit/src/main/java/com/iflytek/astron/console/toolkit/controller/`
+     - Service: `console/backend/toolkit/src/main/java/com/iflytek/astron/console/toolkit/service/`
+   - Commons 模块:
+     - 工具类: `console/backend/commons/src/main/java/com/iflytek/astron/console/commons/util/`
+     - DTO: `console/backend/commons/src/main/java/com/iflytek/astron/console/commons/dto/`
+     - Service: `console/backend/commons/src/main/java/com/iflytek/astron/console/commons/service/`
+     - 配置: `console/backend/commons/src/main/java/com/iflytek/astron/console/commons/config/`
 3. 找到相似功能的现有实现作为参考（读取具体代码）
 4. 设计新增/修改的类结构
 5. 编写关键代码骨架
