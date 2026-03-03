@@ -64,20 +64,39 @@ MySQL + Redis (Redisson) + Kafka + MinIO
 
 ### Claude Code Skills
 
-Console 项目提供了 8 个 Claude Code Skills，用于文档驱动开发：
+Console 项目提供了 9 个 Claude Code Skills，用于文档驱动开发：
 
 | Skill | 命令 | 说明 | 输出文件 |
 |-------|------|------|----------|
+| 上下文校验 | `/context-check` | 校验模块文档与代码一致性 | `context-check-report.md` |
 | 需求文档 | `/requirement` | 将用户需求转化为结构化需求文档 | `requirement.md` |
-| 用户故事 | `/stories` | 从需求提取用户故事和验收标准 | `stories.md` |
+| 用户故事 | `/stories` | 从需求提取用户故事和验收标准（按需） | `stories.md` |
 | 技术规格 | `/spec` | 设计 API、数据模型、前端规格 | `spec.md` |
 | 任务规划 | `/tasks` | 拆解为可执行任务，带依赖关系 | `tasks.md` |
-| 后端设计 | `/backend-design` | 生成后端类设计和代码骨架 | `backend-design.md` |
-| 前端设计 | `/frontend-design` | 生成前端组件树和状态管理方案 | `frontend-design.md` |
+| 后端设计 | `/backend-design` | 生成后端类设计和代码骨架（按需） | `backend-design.md` |
+| 前端设计 | `/frontend-design` | 生成前端组件树和状态管理方案（按需） | `frontend-design.md` |
 | 模块文档 | `/doc-module` | 从代码逆向生成模块文档 | `module.md` |
 | Bug 修复 | `/bugfix` | 记录 Bug 根因分析和修复方案 | `bugfix.md` |
 
 ### 开发流程
+
+根据任务类型选择合适的流程：
+
+**大功能（完整链路）**：
+```
+/context-check → /requirement → /stories → /spec → /tasks → /backend-design + /frontend-design → 实现 → /doc-module
+```
+
+**小功能（快速链路）**：
+```
+/context-check → /requirement → /spec → /tasks → 实现 → /doc-module
+```
+
+**Bug 修复**：
+- 简单 Bug：直接修复 → 验证 → /doc-module（如需）
+- 复杂 Bug：走完整链路或快速链路
+
+详见：[WORKFLOW.md](../.claude/WORKFLOW.md)
 
 **新功能开发**:
 ```

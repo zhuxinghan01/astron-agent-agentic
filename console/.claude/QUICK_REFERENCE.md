@@ -1,24 +1,41 @@
 # Skills 快速参考
 
-## 🎯 何时使用哪个 Skill
+## 🎯 流程选择指南
 
-### 新功能开发
+### 大功能（完整链路）
+
+**适用场景**：新增数据表、新增前端页面、跨模块改动、多角色交互
 
 ```mermaid
 graph LR
-    A[收到需求] --> B[/requirement]
-    B --> C[/stories]
+    A[收到需求] --> B[/context-check]
+    B --> C[/requirement]
+    C --> D[/stories]
+    D --> E[/spec]
+    E --> F[/tasks]
+    F --> G[/backend-design<br/>/frontend-design]
+    G --> H[实现代码]
+    H --> I[/doc-module]
+```
+
+### 小功能（快速链路）
+
+**适用场景**：单模块改动、明确需求、简单 CRUD、单角色场景
+
+```mermaid
+graph LR
+    A[收到需求] --> B[/context-check]
+    B --> C[/requirement]
     C --> D[/spec]
     D --> E[/tasks]
-    E --> F[/backend-design<br/>/frontend-design]
-    F --> G[实现代码]
-    G --> H[/doc-module]
+    E --> F[实现代码]
+    F --> G[/doc-module]
 ```
 
 ### Bug 修复
 
 ```
-简单 Bug (单文件) → 直接修复 → 提交
+简单 Bug (单文件) → 直接修复 → 验证 → /doc-module（如需）
 复杂 Bug (多文件/重构) → /bugfix → 实现 → /doc-module
 ```
 
@@ -34,14 +51,19 @@ graph LR
 
 | # | Skill | 命令 | 输入 | 输出 | 耗时 |
 |---|-------|------|------|------|------|
+| 0 | 上下文校验 | `/context-check` | 模块名称 | `context-check-report.md` | 5-10min |
 | 1 | 需求文档 | `/requirement` | 用户需求描述 | `requirement.md` | 5-10min |
 | 2 | 用户故事 | `/stories` | `requirement.md` | `stories.md` | 5-10min |
-| 3 | 技术规格 | `/spec` | `stories.md` | `spec.md` | 10-15min |
+| 3 | 技术规格 | `/spec` | `requirement.md` (+ `stories.md`) | `spec.md` | 10-15min |
 | 4 | 任务规划 | `/tasks` | `spec.md` | `tasks.md` | 5-10min |
 | 5 | 后端设计 | `/backend-design` | `spec.md` + `tasks.md` | `backend-design.md` | 10-20min |
 | 6 | 前端设计 | `/frontend-design` | `spec.md` + `tasks.md` | `frontend-design.md` | 10-20min |
 | 7 | 模块文档 | `/doc-module` | 现有代码 | `module.md` | 10-15min |
 | 8 | Bug 修复 | `/bugfix` | Issue 编号 | `bugfix.md` | 10-15min |
+
+**说明**：
+- `/stories`、`/backend-design`、`/frontend-design` 为按需执行，不是所有流程都需要
+- `/context-check` 建议在开始新功能前执行，确保模块文档可信
 
 ---
 

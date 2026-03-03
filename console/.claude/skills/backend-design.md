@@ -25,7 +25,10 @@
      - Controller: `console/backend/toolkit/src/main/java/com/iflytek/astron/console/toolkit/controller/`
      - Service: `console/backend/toolkit/src/main/java/com/iflytek/astron/console/toolkit/service/`
    - Commons 模块:
-     - 工具类: `console/backend/commons/src/main/java/com/iflytek/astron/console/commons/`
+     - 工具类: `console/backend/commons/src/main/java/com/iflytek/astron/console/commons/util/`
+     - DTO: `console/backend/commons/src/main/java/com/iflytek/astron/console/commons/dto/`
+     - Service: `console/backend/commons/src/main/java/com/iflytek/astron/console/commons/service/`
+     - 配置: `console/backend/commons/src/main/java/com/iflytek/astron/console/commons/config/`
 3. 找到相似功能的现有实现作为参考（读取具体代码）
 4. 设计新增/修改的类结构
 5. 编写关键代码骨架

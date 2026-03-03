@@ -4,11 +4,13 @@
 
 ## 前置条件
 
-读取 `console/docsForAi/{feature-name}/stories.md`。如不存在，提示用户先执行 `/stories`。
+读取 `console/docsForAi/{feature-name}/requirement.md`（必须）。
+
+如果存在 `console/docsForAi/{feature-name}/stories.md`，也一并读取。如不存在，可根据 requirement.md 直接生成规格说明（适用于小功能快速链路）。
 
 ## 执行步骤
 
-1. 读取用户故事文档
+1. 读取需求文档（requirement.md）和用户故事文档（stories.md，如存在）
 2. 分析现有代码中相关的模块：
    - 后端 Controller:
      - Hub 模块: `console/backend/hub/src/main/java/com/iflytek/astron/console/hub/controller/`
@@ -18,7 +20,10 @@
      - Toolkit 模块: `console/backend/toolkit/src/main/java/com/iflytek/astron/console/toolkit/service/`
    - 后端 Entity:
      - Hub 模块: `console/backend/hub/src/main/java/com/iflytek/astron/console/hub/entity/`
-   - Commons 工具类: `console/backend/commons/src/main/java/com/iflytek/astron/console/commons/`
+   - Commons 模块:
+     - 工具类: `console/backend/commons/src/main/java/com/iflytek/astron/console/commons/util/`
+     - DTO: `console/backend/commons/src/main/java/com/iflytek/astron/console/commons/dto/`
+     - Service: `console/backend/commons/src/main/java/com/iflytek/astron/console/commons/service/`
    - 前端页面: `console/frontend/src/pages/`
    - 前端服务: `console/frontend/src/services/`
    - 前端 Store: `console/frontend/src/store/`

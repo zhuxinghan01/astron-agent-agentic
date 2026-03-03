@@ -22,7 +22,9 @@
      - Controller: `console/backend/toolkit/src/main/java/com/iflytek/astron/console/toolkit/controller/`
      - Service: `console/backend/toolkit/src/main/java/com/iflytek/astron/console/toolkit/service/`
    - Commons 模块:
-     - 工具类: `console/backend/commons/src/main/java/com/iflytek/astron/console/commons/`
+     - 工具类: `console/backend/commons/src/main/java/com/iflytek/astron/console/commons/util/`
+     - DTO: `console/backend/commons/src/main/java/com/iflytek/astron/console/commons/dto/`
+     - Service: `console/backend/commons/src/main/java/com/iflytek/astron/console/commons/service/`
 3. 扫描前端代码：
    - 页面: `console/frontend/src/pages/` 下相关文件
    - 服务: `console/frontend/src/services/` 下相关文件
