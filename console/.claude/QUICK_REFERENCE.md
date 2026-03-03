@@ -36,7 +36,7 @@ graph LR
 
 ```
 简单 Bug (单文件) → 直接修复 → 验证 → /doc-module（如需）
-复杂 Bug (多文件/重构) → /bugfix → 实现 → /doc-module
+复杂 Bug (多文件/重构) → 走完整链路或快速链路（根据复杂度选择）
 ```
 
 ### 文档生成
@@ -148,7 +148,7 @@ make check && make test
 git commit -m "fix(module): resolve issue #123"
 ```
 
-### 场景 3: 复杂 Bug 修复
+### 场景 4: 复杂 Bug 修复
 
 ```bash
 # 根据复杂度选择：
@@ -166,7 +166,7 @@ git commit -m "fix(module): resolve issue #123"
 /doc-module
 ```
 
-### 场景 4: 为已有代码生成文档
+### 场景 5: 为已有代码生成文档
 
 ```bash
 # 直接生成模块文档
