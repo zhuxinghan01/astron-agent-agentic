@@ -151,6 +151,10 @@ git commit -m "fix(module): resolve issue #123"
 ### 场景 3: 复杂 Bug 修复
 
 ```bash
+# 根据复杂度选择：
+# - 简单 Bug：直接修复 → 验证 → /doc-module（如需）
+# - 复杂 Bug：走完整链路或快速链路
+
 # 1. 生成 Bug 修复文档
 /bugfix
 # 输入: Issue 编号
@@ -180,6 +184,8 @@ git commit -m "fix(module): resolve issue #123"
 ```
 用户需求
     ↓
+/context-check → context-check-report.md (推荐)
+    ↓
 /requirement → requirement.md
     ↓
 /stories → stories.md
@@ -201,6 +207,8 @@ backend-design.md + frontend-design.md
 
 ```
 用户需求
+    ↓
+/context-check → context-check-report.md (推荐)
     ↓
 /requirement → requirement.md
     ↓
