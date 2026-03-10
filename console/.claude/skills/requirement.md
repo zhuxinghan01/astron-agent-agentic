@@ -5,7 +5,7 @@
 ## 执行步骤
 
 1. 理解用户描述的需求，必要时追问澄清模糊点
-2. 确定功能名称（英文短横线命名，如 `bot-tag-management`），创建目录 `console/docsForAi/{feature-name}/`
+2. 确定功能名称（英文短横线命名，如 `bot-tag-management`），创建目录 `console/.claude/docs/{feature-name}/`
 3. 读取项目代码，分析需求涉及的现有业务模块：
    - 后端: 查找相关的 Controller、Service、Entity
      - Hub 模块: `console/backend/hub/src/main/java/com/iflytek/astron/console/hub/`
@@ -16,7 +16,7 @@
 
 ## 输出文件
 
-`console/docsForAi/{feature-name}/requirement.md`
+`console/.claude/docs/{feature-name}/requirement.md`
 
 ## 输出模板
 

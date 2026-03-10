@@ -14,16 +14,16 @@ Astron Agent Console 是 Astron Agent 平台的控制台子系统，提供 AI Ag
 
 | 模块 | 文档路径 | 后端模块 | 说明 |
 |------|---------|---------|------|
-| [Bot 管理](bot-management/module.md) | `docsForAi/bot-management/` | Hub | 助手创建、配置、收藏、人设、语音 |
-| [聊天](chat/module.md) | `docsForAi/chat/` | Hub | SSE 流式聊天、历史、文件、重启 |
-| [工作流](workflow/module.md) | `docsForAi/workflow/` | **Toolkit** | 工作流模板、编排、流式执行 |
-| [空间管理](space-management/module.md) | `docsForAi/space-management/` | Hub | 个人/企业空间、成员、权限 |
-| [企业管理](enterprise-management/module.md) | `docsForAi/enterprise-management/` | Hub | 团队创建、成员管理、邀请 |
-| [用户管理](user-management/module.md) | `docsForAi/user-management/` | Hub | 用户信息、我的助手 |
-| [发布管理](publish/module.md) | `docsForAi/publish/` | Hub | 多渠道发布、API 管理、版本 |
-| [模型管理](model-management/module.md) | `docsForAi/model-management/` | **Toolkit** | 模型配置、参数、供应商 |
-| [知识库](knowledge/module.md) | `docsForAi/knowledge/` | **Toolkit** | 数据集、文档、向量检索 |
-| [AI 工具](ai-tools/module.md) | `docsForAi/ai-tools/` | **Toolkit** | 工具创建、调试、MCP、工具广场 |
+| [Bot 管理](bot-management/module.md) | `bot-management/` | Hub | 助手创建、配置、收藏、人设、语音 |
+| [聊天](chat/module.md) | `chat/` | Hub | SSE 流式聊天、历史、文件、重启 |
+| [工作流](workflow/module.md) | `workflow/` | **Toolkit** | 工作流模板、编排、流式执行 |
+| [空间管理](space-management/module.md) | `space-management/` | Hub | 个人/企业空间、成员、权限 |
+| [企业管理](enterprise-management/module.md) | `enterprise-management/` | Hub | 团队创建、成员管理、邀请 |
+| [用户管理](user-management/module.md) | `user-management/` | Hub | 用户信息、我的助手 |
+| [发布管理](publish/module.md) | `publish/` | Hub | 多渠道发布、API 管理、版本 |
+| [模型管理](model-management/module.md) | `model-management/` | **Toolkit** | 模型配置、参数、供应商 |
+| [知识库](knowledge/module.md) | `knowledge/` | **Toolkit** | 数据集、文档、向量检索 |
+| [AI 工具](ai-tools/module.md) | `ai-tools/` | **Toolkit** | 工具创建、调试、MCP、工具广场 |
 
 **说明**：加粗的 **Toolkit** 表示该模块的 Controller 和 Service 主要在 `console/backend/toolkit/` 中。
 
@@ -81,7 +81,7 @@ MySQL + Redis (Redisson) + Kafka + MinIO
 
 ## 开发工作流程
 
-**完整工作流程文档**: [WORKFLOW.md](../.claude/WORKFLOW.md)
+**完整工作流程文档**: [WORKFLOW.md](../WORKFLOW.md)
 
 ### Agentic Coding 范式
 
@@ -144,7 +144,7 @@ Console 项目提供了 **10 个** Claude Code Skills，用于文档驱动开发
 - **简单 Bug**（单文件、单方法）：直接修复 → 验证 → `/doc-module`（如需）→ `/drift-check`（如需）
 - **复杂 Bug**（重构、多模块）：走完整链路或快速链路
 
-详见：[WORKFLOW.md](../.claude/WORKFLOW.md)
+详见：[WORKFLOW.md](../WORKFLOW.md)
 
 ## 文档生成状态
 

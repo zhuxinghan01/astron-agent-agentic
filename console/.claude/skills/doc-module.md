@@ -35,7 +35,7 @@
 
 ## 输出文件
 
-`console/docsForAi/{module-name}/module.md`
+`console/.claude/docs/{module-name}/module.md`
 
 ## 输出模板
 

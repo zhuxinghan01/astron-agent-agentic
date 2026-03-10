@@ -24,7 +24,7 @@
 
 ## 输出文件
 
-`console/docsForAi/bugfix-{issue-number}/bugfix.md`
+`console/.claude/docs/bugfix-{issue-number}/bugfix.md`
 
 ## 输出模板
 
@@ -210,7 +210,7 @@ public void test{Scenario}() {
 ## 8. 相关文档更新
 
 **需要更新的文档**:
-- [ ] `console/docsForAi/{module}/module.md` - {更新内容}
+- [ ] `console/.claude/docs/{module}/module.md` - {更新内容}
 - [ ] `console/backend/CLAUDE.md` - {更新内容}（如适用）
 - [ ] `console/frontend/CLAUDE.md` - {更新内容}（如适用）
 
@@ -247,7 +247,7 @@ public void test{Scenario}() {
 #    - 生成 bugfix.md
 
 # 4. 输出文件
-console/docsForAi/bugfix-941/bugfix.md
+console/.claude/docs/bugfix-941/bugfix.md
 ```
 
 ### 示例 2: 快速修复（不生成文档）

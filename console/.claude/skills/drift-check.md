@@ -10,7 +10,7 @@
 
 ## 执行步骤
 
-1. 读取刚更新的 `console/docsForAi/{module}/module.md`
+1. 读取刚更新的 `console/.claude/docs/{module}/module.md`
 2. 从实际代码中重新抽取关键信息：
    - 后端 API 端点（从 Controller 注解中提取）
    - Entity 字段（从 Entity 类中提取）
@@ -24,7 +24,7 @@
 
 ## 输出文件
 
-`console/docsForAi/{module}/drift-check-report.md`（临时文件，验证通过后可删除）
+`console/.claude/docs/{module}/drift-check-report.md`（临时文件，验证通过后可删除）
 
 ## 输出模板
 

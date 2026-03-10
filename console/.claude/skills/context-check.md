@@ -11,7 +11,7 @@
 ## 执行步骤
 
 1. 根据用户需求，识别涉及的模块（bot/workflow/ai-tools/chat/space/enterprise/user/publish/model/knowledge）
-2. 读取对应的 `console/docsForAi/{module}/module.md`
+2. 读取对应的 `console/.claude/docs/{module}/module.md`
 3. 从实际代码中抽取关键信息：
    - 后端 API 端点（从 Controller 注解中提取）
    - Entity 字段（从 Entity 类中提取）
@@ -24,7 +24,7 @@
 
 ## 输出文件
 
-`console/docsForAi/{module}/context-check-report.md`（临时文件，校验后可删除）
+`console/.claude/docs/{module}/context-check-report.md`（临时文件，校验后可删除）
 
 ## 输出模板
 

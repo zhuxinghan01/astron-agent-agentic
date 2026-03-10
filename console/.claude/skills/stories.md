@@ -4,7 +4,7 @@
 
 ## 前置条件
 
-读取 `console/docsForAi/{feature-name}/requirement.md`。如不存在，提示用户先执行 `/requirement`。
+读取 `console/.claude/docs/{feature-name}/requirement.md`。如不存在，提示用户先执行 `/requirement`。
 
 ## 执行步骤
 
@@ -16,7 +16,7 @@
 
 ## 输出文件
 
-`console/docsForAi/{feature-name}/stories.md`
+`console/.claude/docs/{feature-name}/stories.md`
 
 ## 输出模板
 

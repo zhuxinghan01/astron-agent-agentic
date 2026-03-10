@@ -4,7 +4,7 @@
 
 ## 前置条件
 
-读取 `console/docsForAi/{feature-name}/spec.md`。如不存在，提示用户先执行 `/spec`。
+读取 `console/.claude/docs/{feature-name}/spec.md`。如不存在，提示用户先执行 `/spec`。
 
 ## 执行步骤
 
@@ -17,7 +17,7 @@
 
 ## 输出文件
 
-`console/docsForAi/{feature-name}/tasks.md`
+`console/.claude/docs/{feature-name}/tasks.md`
 
 ## 输出模板
 

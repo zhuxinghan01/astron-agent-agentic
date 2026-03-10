@@ -202,8 +202,8 @@ status: {pass/warning/fail}
 校验报告是临时文件，验证通过后可以删除：
 ```bash
 # 验证通过后清理
-rm console/docsForAi/{module}/context-check-report.md
-rm console/docsForAi/{module}/drift-check-report.md
+rm console/.claude/docs/{module}/context-check-report.md
+rm console/.claude/docs/{module}/drift-check-report.md
 ```
 
 ## 文件结构
@@ -213,15 +213,15 @@ console/
 ├── .claude/
 │   ├── DOC_VALIDATION_LOOP.md    # 本文件
 │   ├── QUICK_REFERENCE.md        # 已更新，包含 /drift-check
-│   └── skills/
-│       ├── context-check.md      # 前置校验
-│       ├── doc-module.md         # 文档生成
-│       └── drift-check.md        # 后置校验（新增）
-└── docsForAi/
-    └── {module}/
-        ├── module.md                    # 模块文档
-        ├── context-check-report.md      # 前置校验报告（临时）
-        └── drift-check-report.md        # 后置校验报告（临时）
+│   ├── skills/
+│   │   ├── context-check.md      # 前置校验
+│   │   ├── doc-module.md         # 文档生成
+│   │   └── drift-check.md        # 后置校验（新增）
+│   └── docs/
+│       └── {module}/
+│           ├── module.md                    # 模块文档
+│           ├── context-check-report.md      # 前置校验报告（临时）
+│           └── drift-check-report.md        # 后置校验报告（临时）
 ```
 
 ## 总结

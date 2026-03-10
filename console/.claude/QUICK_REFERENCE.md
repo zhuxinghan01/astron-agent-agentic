@@ -86,24 +86,24 @@ graph LR
 # 0. 上下文校验（推荐）
 /context-check
 # 输入: 模块名称（如 bot-management）
-# 输出: console/docsForAi/{module}/context-check-report.md
+# 输出: console/.claude/docs/{module}/context-check-report.md
 
 # 1. 需求分析
 /requirement
 # 输入: 描述功能需求
-# 输出: console/docsForAi/{feature-name}/requirement.md
+# 输出: console/.claude/docs/{feature-name}/requirement.md
 
 # 2. 用户故事
 /stories
-# 输出: console/docsForAi/{feature-name}/stories.md
+# 输出: console/.claude/docs/{feature-name}/stories.md
 
 # 3. 技术规格
 /spec
-# 输出: console/docsForAi/{feature-name}/spec.md
+# 输出: console/.claude/docs/{feature-name}/spec.md
 
 # 4. 任务拆解
 /tasks
-# 输出: console/docsForAi/{feature-name}/tasks.md
+# 输出: console/.claude/docs/{feature-name}/tasks.md
 
 # 5. 技术设计
 /backend-design
@@ -176,7 +176,7 @@ git commit -m "fix(module): resolve issue #123"
 # 1. 生成 Bug 修复文档
 /bugfix
 # 输入: Issue 编号
-# 输出: console/docsForAi/bugfix-{number}/bugfix.md
+# 输出: console/.claude/docs/bugfix-{number}/bugfix.md
 
 # 2. 按文档实现修复
 
@@ -190,7 +190,7 @@ git commit -m "fix(module): resolve issue #123"
 # 直接生成模块文档
 /doc-module
 # 输入: 模块名称
-# 输出: console/docsForAi/{module}/module.md
+# 输出: console/.claude/docs/{module}/module.md
 ```
 
 ---
@@ -319,19 +319,19 @@ console/
 │       ├── doc-module.md        # Skill 7: 模块文档
 │       ├── drift-check.md       # Skill 8: 文档漂移校验
 │       └── bugfix.md            # Skill 9: Bug 修复
-└── docsForAi/
-    ├── overview.md              # 项目概览
-    ├── {module}/
-    │   ├── module.md            # 模块文档
-    │   ├── context-check-report.md  # 上下文校验报告（临时）
-    │   └── drift-check-report.md    # 文档漂移校验报告（临时）
-    ├── {feature-name}/          # 新功能文档
-    │   ├── requirement.md
-    │   ├── stories.md           # 按需生成
-    │   ├── spec.md
-    │   ├── tasks.md
-    │   ├── backend-design.md    # 按需生成
-    │   └── frontend-design.md   # 按需生成
+├── docs/
+│   ├── overview.md              # 项目概览
+│   ├── {module}/
+│   │   ├── module.md            # 模块文档
+│   │   ├── context-check-report.md  # 上下文校验报告（临时）
+│   │   └── drift-check-report.md    # 文档漂移校验报告（临时）
+│   ├── {feature-name}/          # 新功能文档
+│   │   ├── requirement.md
+│   │   ├── stories.md           # 按需生成
+│   │   ├── spec.md
+│   │   ├── tasks.md
+│   │   ├── backend-design.md    # 按需生成
+│   │   └── frontend-design.md   # 按需生成
     └── bugfix-{number}/         # Bug 修复文档
         └── bugfix.md
 ```
@@ -373,7 +373,7 @@ console/
 - [Console Backend CLAUDE.md](../backend/CLAUDE.md)
 - [Console Frontend CLAUDE.md](../frontend/CLAUDE.md)
 - [项目 CLAUDE.md](../../CLAUDE.md)
-- [docsForAi Overview](../docsForAi/overview.md)
+- [Docs Overview](docs/overview.md)
 
 ---
 

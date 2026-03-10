@@ -4,9 +4,9 @@
 
 ## 前置条件
 
-读取 `console/docsForAi/{feature-name}/requirement.md`（必须）。
+读取 `console/.claude/docs/{feature-name}/requirement.md`（必须）。
 
-如果存在 `console/docsForAi/{feature-name}/stories.md`，也一并读取。如不存在，可根据 requirement.md 直接生成规格说明（适用于小功能快速链路）。
+如果存在 `console/.claude/docs/{feature-name}/stories.md`，也一并读取。如不存在，可根据 requirement.md 直接生成规格说明（适用于小功能快速链路）。
 
 ## 执行步骤
 
@@ -34,7 +34,7 @@
 
 ## 输出文件
 
-`console/docsForAi/{feature-name}/spec.md`
+`console/.claude/docs/{feature-name}/spec.md`
 
 ## 输出模板
 

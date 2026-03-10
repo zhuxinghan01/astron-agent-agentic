@@ -5,8 +5,8 @@
 ## 前置条件
 
 读取以下文档：
-- `console/docsForAi/{feature-name}/spec.md`（必须）
-- `console/docsForAi/{feature-name}/tasks.md`（必须）
+- `console/.claude/docs/{feature-name}/spec.md`（必须）
+- `console/.claude/docs/{feature-name}/tasks.md`（必须）
 
 同时读取现有前端代码，参考 `console/frontend/CLAUDE.md` 中的架构规范。
 
@@ -31,7 +31,7 @@
 
 ## 输出文件
 
-`console/docsForAi/{feature-name}/frontend-design.md`
+`console/.claude/docs/{feature-name}/frontend-design.md`
 
 ## 输出模板
 
