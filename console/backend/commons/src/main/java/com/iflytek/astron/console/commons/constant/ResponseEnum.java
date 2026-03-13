@@ -74,6 +74,16 @@ public enum ResponseEnum {
     ACTIVITY_NOT_FOUND_ERROR(60030, "error.activity.not.found"),
     BOT_CHAIN_UPDATE_ERROR(60031, "error.bot.chain.update.error"),
 
+    // Resource points related errors 14001-14008
+    RESOURCE_INSUFFICIENT(14001, "resource.insufficient"),
+    RESOURCE_REQUEST_IN_PROCESS(14002, "resource.request.in.process"),
+    RESOURCE_CONCURRENT_CONFLICT(14003, "resource.concurrent.conflict"),
+    RESOURCE_IDEMPOTENT_DUPLICATE(14004, "resource.idempotent.duplicate"),
+    RESOURCE_ORIGINAL_DEDUCT_NOT_FOUND(14005, "resource.original.deduct.not.found"),
+    RESOURCE_DEDUCT_DETAIL_NOT_FOUND(14006, "resource.deduct.detail.not.found"),
+    RESOURCE_RECORD_NOT_FOUND(14007, "resource.record.not.found"),
+    RESOURCE_REFUND_CONCURRENT_CONFLICT(14008, "resource.refund.concurrent.conflict"),
+
     USER_APP_ID_CREATE_ERROR(60032, "error.app.create.failed"),
     USER_APP_NAME_REPEAT(60033, "error.app.create.name.repeat"),
     BOT_API_CREATE_LIMIT_ERROR(60034, "error.bot.api.create.limited"),
