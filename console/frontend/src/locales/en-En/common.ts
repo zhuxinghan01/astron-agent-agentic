@@ -161,6 +161,7 @@ const translation = {
     notFavorited: 'Not Favorited',
   },
   header: {
+    point: 'Points',
     plugin: 'Plugin',
     knowledge: 'Knowledge Base',
     database: 'Database',

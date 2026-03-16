@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router-dom';
 const KnowledgePage = React.lazy(() => import('./knowledge-page'));
 const KnowledgeDetail = React.lazy(() => import('./knowledge-detail'));
 const UploadPage = React.lazy(() => import('./upload-page'));
+const PointPage = React.lazy(() => import('./point-page'));
 const PluginPage = React.lazy(() => import('./plugin-page'));
 const PluginDetail = React.lazy(() => import('./plugin-detail'));
 const PluginCreate = React.lazy(() => import('./plugin-create'));
@@ -27,6 +28,7 @@ function ResourceManagement(): JSX.Element {
         }
       >
         <Routes>
+          <Route path="/point" element={<PointPage />} />
           <Route path="/knowledge" element={<KnowledgePage />} />
           <Route path="/knowledge/detail/*" element={<KnowledgeDetail />} />
           <Route path="/knowledge/upload" element={<UploadPage />} />

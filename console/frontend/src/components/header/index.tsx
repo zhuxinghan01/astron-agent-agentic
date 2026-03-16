@@ -14,7 +14,23 @@ import RetractableInput from '../ui/global/retract-table-input';
 import ArrowDownIconWhite from '@/assets/svgs/arrow-down-white.svg';
 import styles from './index.module.scss';
 
+interface TabConfig {
+  key: string;
+  path: string;
+  iconClass: string;
+  title: string;
+  searchPlaceholder?: string;
+  createButtonText?: string;
+  createButtonKey?: string;
+}
+
 const tabs = [
+  {
+    key: 'point',
+    path: '/resource/point',
+    iconClass: 'point-icon',
+    title: 'common.header.point',
+  },
   {
     key: 'plugin',
     path: '/resource/plugin',
@@ -51,7 +67,7 @@ const tabs = [
     createButtonText: 'rpa.createRpa',
     createButtonKey: 'create-rpa',
   },
-];
+] satisfies TabConfig[];
 
 interface HeaderProps {
   onSearch?: (value: string, type: string) => void;
@@ -141,7 +157,7 @@ function index({ onSearch, onCreate }: HeaderProps): JSX.Element {
         {/* 右侧工具区域 */}
         <div className={styles.toolsContainer}>
           {/* 搜索框 */}
-          {currentTabConfig && (
+          {currentTabConfig?.searchPlaceholder && (
             <div className={styles.searchContainer}>
               <RetractableInput
                 restrictFirstChar={true}
@@ -153,25 +169,26 @@ function index({ onSearch, onCreate }: HeaderProps): JSX.Element {
           )}
 
           {/* 新建按钮 */}
-          {currentTabConfig && (
-            <SpaceButton
-              config={{
-                key: currentTabConfig.createButtonKey,
-                text: t(currentTabConfig.createButtonText),
-                type: 'primary',
-                size: 'small',
-                icon: (
-                  <img
-                    src={ArrowDownIconWhite}
-                    alt="arrow-down"
-                    style={{ width: 14, height: 14 }}
-                  />
-                ),
-                onClick: () => handleCreateClick(currentTab),
-              }}
-              className={styles.createButton}
-            />
-          )}
+          {currentTabConfig?.createButtonText &&
+            currentTabConfig.createButtonKey && (
+              <SpaceButton
+                config={{
+                  key: currentTabConfig.createButtonKey,
+                  text: t(currentTabConfig.createButtonText),
+                  type: 'primary',
+                  size: 'small',
+                  icon: (
+                    <img
+                      src={ArrowDownIconWhite}
+                      alt="arrow-down"
+                      style={{ width: 14, height: 14 }}
+                    />
+                  ),
+                  onClick: () => handleCreateClick(currentTab),
+                }}
+                className={styles.createButton}
+              />
+            )}
         </div>
       </div>
     </div>

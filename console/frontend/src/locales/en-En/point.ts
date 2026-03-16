@@ -1,0 +1,32 @@
+const translation = {
+  pageTitle: 'Resource Points',
+  pageDescription:
+    'View current available points and recent point flows for the open-source P0 scope.',
+  totalBalance: 'Available Points',
+  totalGranted: 'Total Granted',
+  memberBalance: 'Member Points',
+  buyBalance: 'Purchased Points',
+  activityBalance: 'Activity Points',
+  flowTitle: 'Point Flows',
+  direction: 'Direction',
+  directionAll: 'All Directions',
+  directionAdd: 'Grant',
+  directionDeduct: 'Deduct',
+  directionInvalidate: 'Invalidate',
+  directionRefund: 'Refund',
+  timeRange: 'Time Range',
+  startTime: 'Start Time',
+  endTime: 'End Time',
+  directionColumn: 'Direction',
+  amountColumn: 'Amount',
+  sourceColumn: 'Source',
+  reasonColumn: 'Reason',
+  remarkColumn: 'Remark',
+  timeColumn: 'Time',
+  empty: 'No point flows',
+  pageIndicator: 'Page {{page}}',
+  prevPage: 'Previous',
+  nextPage: 'Next',
+};
+
+export default translation;

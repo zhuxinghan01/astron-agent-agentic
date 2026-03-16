@@ -154,6 +154,7 @@ const translation = {
     notFavorited: '未收藏',
   },
   header: {
+    point: '积分',
     plugin: '插件',
     knowledge: '知识库',
     database: '数据库',

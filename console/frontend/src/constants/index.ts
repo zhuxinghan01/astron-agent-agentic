@@ -129,7 +129,7 @@ export const createMenuList = (): {
         iconAct: resourceManagementAct,
         subTitle: getTranslation('sidebar.resourceManagement'),
         activeTab: 'resource',
-        path: '/resource/plugin',
+        path: '/resource/point',
       },
       {
         icon: appManagement,
